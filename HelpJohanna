@@ -1,0 +1,24 @@
+import random
+
+
+
+
+correct_value = random.randint(1,100)
+print(correct_value)
+user_guess = int(input("Skriv ett tal: "))
+
+
+if user_guess > 100:
+    print("Ditt tal är för högt. Välj ett tal mellan 1 och 100")
+
+elif user_guess == correct_value:
+    print(f"Du gissade rätt. Rätt tal är {correct_value}")
+
+elif user_guess < correct_value:
+    print("Du gissade fel. Välj ett högre tal")
+
+elif user_guess > correct_value and user_guess < correct_value + 10:
+    print("Du gissade fel, men det bränns. Välj ett lägre tal")
+
+else:
+    print("Du gissade fel. Välj ett lägre tal")
